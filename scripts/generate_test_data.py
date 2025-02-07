@@ -3,6 +3,10 @@ Generate the test data"""
 import json
 import os
 
+from dotenv import load_dotenv
+load_dotenv(".env")
+load_dotenv("../.env")
+
 from browser_env.env_config import *
 
 

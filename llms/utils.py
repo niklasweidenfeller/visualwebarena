@@ -1,11 +1,4 @@
-import argparse
 from typing import Any
-
-try:
-    from vertexai.preview.generative_models import Image
-    from llms import generate_from_gemini_completion
-except:
-    print('Google Cloud not set up, skipping import of vertexai.preview.generative_models.Image and llms.generate_from_gemini_completion')
 
 from llms import (
     generate_from_huggingface_completion,

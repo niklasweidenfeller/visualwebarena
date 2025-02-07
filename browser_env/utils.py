@@ -8,12 +8,6 @@ import numpy.typing as npt
 from beartype import beartype
 from PIL import Image
 
-try:
-    from vertexai.preview.generative_models import Image as VertexImage
-except:
-    print('Google Cloud not set up, skipping import of vertexai.preview.generative_models.Image')
-
-
 @dataclass
 class DetachedPage:
     url: str

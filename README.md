@@ -82,9 +82,15 @@ bash prepare.sh
 
 5. Set up API keys.
 
-If using OpenAI models, set a valid OpenAI API key (starting with `sk-`) as the environment variable:
+Using OpenAI models via SAP Generative AI Hub. Make sure you have a corresponding deployment set up in AI Launchpad.
+Make sure the environment variables required by Generative AI Hub SDK are set:
+
 ```
-export OPENAI_API_KEY=your_key
+export AICORE_CLIENT_ID=<value>
+export AICORE_CLIENT_SECRET=<value>
+export AICORE_AUTH_URL=<value>
+export AICORE_BASE_URL=<value>
+export AICORE_RESOURCE_GROUP=<value>
 ```
 
 If using Gemini, first install the [gcloud CLI](https://cloud.google.com/sdk/docs/install). Configure the API key by authenticating with Google Cloud:

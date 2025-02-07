@@ -1,0 +1,10 @@
+python run.py \
+  --instruction_path agent/prompts/jsons/p_cot_id_actree_3s.json \
+  --test_start_idx 0 \
+  --test_end_idx 1 \
+  --result_dir ./resutls \
+  --test_config_base_dir=config_files/vwa/test_classifieds \
+  --provider openai \
+  --model gpt-4o \
+  --action_set_tag som \
+  --observation_type image_som

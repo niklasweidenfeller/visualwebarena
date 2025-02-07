@@ -13,7 +13,6 @@ from pathlib import Path
 
 import openai
 import requests
-import torch
 from beartype import beartype
 from PIL import Image
 

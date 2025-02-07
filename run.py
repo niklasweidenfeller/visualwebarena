@@ -2,6 +2,8 @@
 
 Modified from https://github.com/web-arena-x/webarena/blob/main/run.py.
 """
+from dotenv import load_dotenv
+load_dotenv()
 import argparse
 import glob
 import json
@@ -12,9 +14,8 @@ import subprocess
 import tempfile
 import time
 from pathlib import Path
-from typing import List
 
-import openai
+from openai import OpenAIError
 import requests
 import torch
 from PIL import Image
@@ -448,7 +449,7 @@ def test(
                 env.save_trace(
                     Path(args.result_dir) / "traces" / f"{task_id}.zip"
                 )
-        except openai.OpenAIError as e:
+        except OpenAIError as e:
             logger.info(f"[OpenAI Error] {repr(e)}")
         except Exception as e:
             logger.info(f"[Unhandled Error] {repr(e)}]")
